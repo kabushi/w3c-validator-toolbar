@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2200 1000" width="220" height="100">
+    
+    <style type="text/css">
+        .color &gt; :nth-child(1) {fill: #6c0100; stroke: #6c0100; stroke-width: 6; stroke-linejoin:bevel;} /* Red */
+        .color &gt; :nth-child(2) {fill: #bb1e17; stroke: #bb1e17; stroke-width: 6; stroke-linejoin:bevel;}
+        .color &gt; :nth-child(3) {fill: #40006c; stroke: #40006c; stroke-width: 6; stroke-linejoin:bevel;} /* Purple */
+        .color &gt; :nth-child(4) {fill: #7A00bc; stroke: #7A00bc; stroke-width: 6; stroke-linejoin:bevel;}
+        .color &gt; :nth-child(5), .blue {fill: #02356d; stroke: #02356d; stroke-width: 6; stroke-linejoin:bevel;} /* Blue */
+        .color &gt; :nth-child(6), .blue-d {fill: #02579e; stroke: #02579e; stroke-width: 6; stroke-linejoin:bevel;}
+        .color &gt; :nth-child(7) {fill: #136c00; stroke: #136c00; stroke-width: 6; stroke-linejoin:bevel;} /* Green */
+        .color &gt; :nth-child(8) {fill: #3bbc00; stroke: #3bbc00; stroke-width: 6; stroke-linejoin:bevel;}
+        .color &gt; :nth-child(9) {fill: #c27400; stroke: #c27400; stroke-width: 6; stroke-linejoin:bevel;} /* Yellow */
+        .color &gt; :nth-child(10){fill: #f4d538; stroke: #f4d538; stroke-width: 6; stroke-linejoin:bevel;}
+        .border &gt; * {fill: white; stroke: white; stroke-width: 10;}
+        .w3, .c1, .c2, .validator {
+            fill: white;
+        }
+    </style>
+
+    <defs>
+        <polygon id="E16" points="  0, 0      224, -688   1115, -688   1307, -99    809, 263   724, 0    "/>
+        <polygon id="M16a" points=" 52, -160   172, -528    999, -528   1119, -160                        "/>
+        <polygon id="M16b" points="                                     1119, -160   757, 103   672, -160 "/>
+        <filter id="shadow" filterUnit="userSpaceOnUse">
+            <feOffset in="SourceAlpha" dx="0" dy="0" result="offset"/>
+            <feGaussianBlur in="offset" stdDeviation="30" result="blur"/>
+            <feFlood flood-color="black" flood-opacity="0.8" result="color"/>
+            <feComposite operator="in" in="color" in2="blur" result="shadow"/>
+            <feComposite operator="over" in="SourceGraphic" in2="shadow"/>
+        </filter>
+    </defs>
+
+    <!--<rect x="0" y="0" fill="#000" height="100%" width="100%" />-->
+
+    <g class="logo m16" filter="url(#shadow)" transform="translate(1650, 512)">
+        <g transform="scale(0.35,0.35)">
+        <g class="border">
+            <use xlink:href="#E16" transform="rotate(0)"/>
+            <use xlink:href="#E16" transform="rotate(72)"/>
+            <use xlink:href="#E16" transform="rotate(144)"/>
+            <use xlink:href="#E16" transform="rotate(216)"/>
+            <use xlink:href="#E16" transform="rotate(288)"/>
+        </g>
+        <g class="color">
+            <use xlink:href="#M16b" transform="rotate(0)"/>
+            <use xlink:href="#M16a" transform="rotate(0)"/>
+            <use xlink:href="#M16b" transform="rotate(72)"/>
+            <use xlink:href="#M16a" transform="rotate(72)"/>
+            <use xlink:href="#M16b" transform="rotate(144)"/>
+            <use xlink:href="#M16a" transform="rotate(144)"/>
+            <use xlink:href="#M16b" transform="rotate(216)"/>
+            <use xlink:href="#M16a" transform="rotate(216)"/>
+            <use xlink:href="#M16b" transform="rotate(288)"/>
+            <use xlink:href="#M16a" transform="rotate(288)"/>
+        </g>
+        </g>
+    </g>
+
+    <g class="w3c" filter="url(#shadow)" transform="translate(80, 270)">
+        <g transform="scale(1.05,1.05)">
+        <path class="w3" d="M0,1h67.7l92.9,315.3l62.7-211.9L192.5,1H260l93.1,315L446,1h252.7l-0.4,31.5l-94.5,162.8         C763.2,246,720.4,520,571.8,520c-69.8,0-109.7-48.3-129.7-106l52.4-21.6c17.4,38.7,38.8,63,74.9,63c78.7,0,99.8-200.5-15.5-204.2         l-38.1,0l0.1-31.4l89.7-154.6l-111.2,0.1L359.6,519.6h-6.7l-96.1-320.7l-96.2,320.7H154L0,1z"/>
+        <path class="c1" d="M984.9,0l11.4,65.9L957.5,140C880.2-2.9,749.4,113.5,778.2,302.3c-79.7-181.2,61.2-410.1,169.1-226.8L984.9,0z"/>
+        <path class="c2" d="M990.1,375.2l9.9,51.4c-80.3,147.9-219.7,114.1-268.6-60.7C758.6,430.9,879.6,561.3,990.1,375.2z"/>
+        </g>
+    </g>
+
+</svg>

@@ -15,22 +15,42 @@
  * This software consists of voluntary contributions made by many individuals
  * and is licensed under the MIT license.
  */
-namespace W3cValidatorToolbar;
+namespace W3cValidatorToolbar\Collector;
 
-class Module {
-    public function getConfig()
+use ZendDeveloperTools\Collector\AbstractCollector;
+use Zend\Mvc\MvcEvent;
+
+/**
+ * Session Data Collector.
+ * @author Abdul Malik Ikhsan <samsonasik@gmail.com>
+ */
+class W3cValidatorCollector extends AbstractCollector
+{
+    /**
+     * {@inheritDoc}
+     */
+    public function getName()
     {
-        return include __DIR__ . '/config/module.config.php';
+        // this name must same with *collectors* name in the configuration
+        return 'w3c.toolbar';
     }
 
-    public function getAutoloaderConfig()
+    /**
+     * {@inheritDoc}
+     */
+    public function getPriority()
     {
-        return array(
-            'Zend\Loader\StandardAutoloader' => array(
-                'namespaces' => array(
-                    __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
-                ),
-            ),
-        );
+        return 10;
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function collect(MvcEvent $mvcEvent)
+    {
+        if (!isset($this->data)) {
+            $this->data = [];
+        }
+    }
+
 }
